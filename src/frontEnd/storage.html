@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML !DOCTYPE declaration</title>
+	
+</head>
+<body>
+    <script src="js/global.js"></script>
+    <script src="js/pre.js"></script>
+
+    <section id="ex9">
+        <style>
+            #ex9 .upload-box{
+                width:500px;
+                height: 300px;
+                border:1px solid gray;
+                box-shadow: 2px 3px 9px hsl(0, 0%, 47%);
+                padding:10px;
+            }
+        </style>
+        <h1>파일업로드 : DND & Trigger</h1>
+        <div class="upload-box">
+            <button class="btn-upload">파일선택</button>
+            <input class="btn-file d-none" type="file"> <!--파일 input box 형태-->     
+            <div id="fileSet">
+            
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <script src="js/storage.js"></script>
+</body>
+</html>
