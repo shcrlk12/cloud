@@ -1,0 +1,40 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database: h2
+    generate-ddl: off
+    defer-datasource-initialization: true #jpa로 엔터티 생성후 초기화 하기 위함.
+
+    show-sql: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test;
+    username: SA
+    password:
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 5
+      pool-name: H2_DB
+
+  sql:
+    init:
+      # schema-locations: classpath:schema-h2.sql
+      data-locations: classpath:data-h2.sql
+      mode: always
+      platform: h2
+  main:
+    allow-circular-references: true
+
+
+jwt:
+  token:
+    header: X-KJWON-AUTH
+    issuer: kjwon
+    client-secret: bFM2e8Zo9NirwqnPnD1VcHrJa9o3pEdtL76QttUu
+    expiry-seconds: 0
+
+server:
+  port: 8010
